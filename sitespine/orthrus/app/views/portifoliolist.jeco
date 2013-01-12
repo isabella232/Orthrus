@@ -1,0 +1,70 @@
+
+
+
+<div class='row-fluid'>
+
+<div  id='portifolioCarousel' class='carousel slide vertical'  data-interval='0'   >
+<ul id='portifolio-list' class=' carousel-inner'>
+<li>
+ <ul class='portifolio work-header'>
+  <li> 
+    <span  class=''>Recent Works</span>
+	</li>
+ </ul>
+</li>
+<% for val, idx in @elements: %>
+<li class='item <%= "active" if idx == 0 %>'>
+  <ul class='portifolio'>
+     <% for gval, idx in val: %>
+     <li class='portifolio-item'>
+     <br/>
+	   <a href="#/projects/<%= gval.id %>/gallery">
+        <span class='work-title'><%= gval.name %></span> 
+        <ul class='work-description'>
+        <% for cval, idx in gval.categories: %>
+        <li style=' <%= "list-style:none;" if idx == 0 %>'><%= cval %></li>	       
+        <% end %>
+        </ul>
+       </a>
+           
+	 </li>
+	 <% end %>
+  </ul>
+</li>
+
+
+<% end %>
+
+
+</ul>
+
+
+<% if @elements.length > 1: %>
+<div id='portifolio-list-pager'>
+   
+	
+	 <div class="filler " style='width:140px;height:52px;' >
+        <div class="filler-picture">
+        <div class="filler-img">
+            <img src="./assets/img/btn-bg.png" alt="test" />
+        </div>
+        <div class="filler-mask">
+            <img src="./assets/img/arrows.png" alt="filler" />
+        </div>
+		<div class='filler-content' >
+		<a href="#portifolioCarousel" title='Next' class='carousel-control left noop-pull-left noop-filler-a' data-slide='prev' ></a>
+		<a href="#portifolioCarousel" title='Previous' class='carousel-control right  noop-pull-right noop-filler-a' data-slide='next'  ></a>
+		
+		</div>
+		<span class='clearfix'></span>
+        </div>
+		
+    </div>
+		
+     
+
+</div>
+<% end %>
+
+</div>
+</div>

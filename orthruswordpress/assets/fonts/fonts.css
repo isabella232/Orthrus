@@ -1,0 +1,30 @@
+/*
+
+
+	
+*/
+
+
+@font-face {
+    font-family: 'arial_mt_std_light_cond';
+    src: url('./arialmtstd-lightcond-webfont.eot');
+    src: url('./arialmtstd-lightcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./arialmtstd-lightcond-webfont.woff') format('woff'),
+         url('./arialmtstd-lightcond-webfont.ttf') format('truetype'),
+         url('./arialmtstd-lightcond-webfont.svg#arial_mt_std_light_condRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'arial_mt_std_cond';
+    src: url('./arialmtstd-boldcond-webfont.eot');
+    src: url('./arialmtstd-boldcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./arialmtstd-boldcond-webfont.woff') format('woff'),
+         url('./arialmtstd-boldcond-webfont.ttf') format('truetype'),
+         url('./arialmtstd-boldcond-webfont.svg#arial_mt_std_condbold') format('svg');
+    font-weight: bold;
+    font-style: normal;    
+}

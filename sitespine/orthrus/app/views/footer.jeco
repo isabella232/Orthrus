@@ -1,0 +1,68 @@
+
+
+<a id='afooter-up' class="span12 footer-collapse" data-toggle="collapse" data-parent="#footer" href="#sitemapCollapse" >
+            &nbsp;
+ </a>
+ <div id='sitemapCollapse' class="noop-navbar-inner accordion-body collapse ">  
+        
+		<div class="norow">  
+          <a id='afooter-toggle' class="span12 footer-collapse" data-toggle="collapse" data-parent="#footer" href="#sitemapCollapse" >
+            &nbsp;
+          </a>
+        </div>
+        <div class="row-fluid"> 
+          <div class='span1'></div>        
+          <div class='span4'>
+          <header class='footer-header-title' >Work</header>
+          <ul class='inline footer-links'>
+            
+            <% for val, idx in @data when idx < 5: %>
+            
+            <li class='' >
+              <a href='#/projects/<%= val.id %>/gallery'><%= val.name %></a>
+            </li>          
+           
+            <% end %> 
+          </ul>
+          </div>          
+          <div class='span6 pull-right'>
+            <div class='row-fluid'>
+            <div class='span2'> </div>
+            <div class='span2'  style=''>
+              <header class='footer-header-title'>Blog</header>
+              <ul class='footer-links'>
+                <li><a href='#'>New Post</a></li>
+                <li><a href='#'><img alt='rss' src='./assets/img/rss_logo.gif' /></a></li>                
+              </ul>
+            </div>  
+            <div class='span2'>
+              <header class='footer-header-title'>Info</header>
+              <ul class='footer-links' >
+                <li><a href='#'>About Us</a></li>
+                <li><a href='#'>Client Login</a></li>
+                
+              </ul>
+            </div>  
+            <div class='span2'>
+              <header class='footer-header-title'>Contact</header>
+              <ul  class='footer-links'>
+                <li><a href='#'>Email</a></li>
+                <li><a href='#'><img alt='twitter' src='./assets/img/twitter_logo.gif' /></a>&nbsp;
+                <a href='#'><img alt='facebook' src='./assets/img/facebook_logo.gif' /></a>
+                </li>
+                
+              </ul>
+            </div>  
+            <div class='span2'> </div>
+            </div>         
+         </div>
+                        
+       </div>  
+      </div>  
+      
+      <div class='footer-rights'>
+      &#0174; 2012 ORTHRUS STUDIO, ALL RIGHTS RESERVED
+      </div>
+      
+	  
+      

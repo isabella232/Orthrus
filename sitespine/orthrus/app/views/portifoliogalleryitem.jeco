@@ -1,0 +1,8 @@
+<li class="span2 galleryitem">
+    <a href="#/projects/<%= @galleryid %>/slideshow" class="thumbnail">
+    <span class='galleryitem-title'><%= @name %>
+    <span class='galleryitem-description'><%= @albumdesc %></span></span>
+    <img src="<%= @thumbURL %>" alt="" >
+	
+    </a>
+</li>

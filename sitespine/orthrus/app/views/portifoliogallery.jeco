@@ -1,0 +1,46 @@
+
+
+<div id='top-header' class='row-fluid' style=''>
+  <header class='span5 offset4 gallery-header' style=''>
+    <h2 class='title'>
+     <%= @name %>
+    </h2>
+    <div class='description'>
+    <%= @albumdesc %> 
+    </div>
+  </header>
+  </div>
+</div>
+
+<div id='gallery-content' class="row-fluid" style=''>
+<div class='span10 offset2'>
+<ul id="gallery" class="thumbnails">
+<% for val, idx in @galleries: %>
+  <li class="span2 galleryitem">           
+      <a href="#/projects/<%= val.galleryid %>/slideshow" class="thumbnail thumbbox"> 
+      <span class='galleryitem-title' ><%= val.ProjectType ? val.name.split("-")[0] %>
+      <span class='galleryitem-description'><%= val.albumdesc %></span></span>	  
+       <img src="<%= val.thumbURL %>" alt="" >  
+      </a>
+	  
+  </li>
+<% end %>
+ 
+</ul>
+</div>
+
+</div>
+
+
+ <a href='#/' class="filler back" style='width:62px;height:64px;' >
+        <div class="filler-picture">
+        <div class="backbutton-img">
+            <img src="./assets/img/back_btn-bg.png" alt="img" />
+        </div>
+        <div class="backbutton-mask back">
+            <img src="./assets/img/back_btn-arrow.png" alt="mask" />
+        </div>		
+        </div>		
+  </a>
+ </div>
+	

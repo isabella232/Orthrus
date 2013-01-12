@@ -1,0 +1,36 @@
+
+
+
+<a href='#/projects/<%=@id %>/gallery' class="filler back" style='width:62px;height:64px;' >
+        <div class="filler-picture">
+        <div class="backbutton-img">
+            <img src="./assets/img/back_btn-bg.png" alt="img" />
+        </div>
+        <div class="backbutton-mask back">
+            <img src="./assets/img/back_btn-arrow.png" alt="mask" />
+        </div>		
+        </div>	
+  </a>
+  
+<!--Arrow Navigation-->
+<% if @selectedgallerylength > 0: %>
+
+<div id='slideshowpagenav' class="filler " style='' >
+        <div class="filler-picture">
+        <div class="fl filler-img">
+            <img src="./assets/img/btn-bg.png" alt="test" />
+        </div>
+        <div class="fl filler-mask">
+            <img src="./assets/img/arrows.png" alt="filler" />
+        </div>
+		<div class='fl filler-content' >
+		<button id="anextslide" title='Next' class='pull-left filler-a load-item anextslide' style='opacity:0'  ></button>
+		<button id="aprevslide" title='Previous' class='pull-right filler-a load-item aprevslide' style='opacity:0'   ></button>
+		
+		</div>
+		<span class='clearfix'></span>
+        </div>
+		
+</div>
+    
+<% end %>

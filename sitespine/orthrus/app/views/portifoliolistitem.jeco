@@ -1,0 +1,2 @@
+<span class='portifoliolistitem-title'><%= @name %></span>
+<span class='portifoliolistitem-description'><%= @albumdesc %></span>

@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body { 
+
+background-color: #FFFFFF;
+
+}
+
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+
+#banner { }
+
+/* Fixed Topbar Navigation */
+body.top-navbar { padding-top: 60px; }
+body.admin-bar .navbar-fixed-top { top: 28px; }
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+#content { }
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+#main { }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+#sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry p.byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 979px) {
+  /* Fix top padding when using the responsive grid with the fixed topbar */
+  body.top-navbar {
+    padding-top: 0;
+  }
+}
+
+
+
+
+body {
+  color: #fff;
+}
+.stack {
+  position: relative;
+}
+.stack > *:not(.active) {
+  display: none;
+}
+#logo {
+  position: absolute;
+  top: 0px;
+/* left:250px; */
+  z-index: 1000;
+  width: 120px;
+/* 128 */
+  height: 120px;
+}
+#collapseLogo {
+  background-image: url("./img/logo-dropdown.png");
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#collapseLogo ul {
+/* min-height:128px;  */
+  margin: 20px;
+}
+#bg-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#gallery li {
+  width: 179px;
+  height: 264px;
+}
+a.thumbnail > img {
+  opactity: 0;
+}
+a.thumbnail > img:hover {
+  opacity: 1;
+}
+.galleryitem .thumbbox {
+  -moz-transition: all 0.2s ease-in-out 0s;
+  border: 5px solid #fff;
+/* border-radius: 4px 4px 4px 4px; */
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  display: block;
+  line-height: 20px;
+  padding: 4px;
+}
+.noop-galleryitem-title {
+  font-size: 20px;
+  left: 0;
+  top: 119px;
+  opacity: 1;
+  padding: 0 10%;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 80%;
+  z-index: 3;
+}
+/* Slide controls override shutter theme css*/
+#prevslide,
+#nextslide {
+  height: 43px;
+  margin-top: -21px;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  width: 43px;
+}
+#prevslide {
+  background: url("./img/back.png") repeat scroll 0 0 transparent;
+  left: 10px;
+}
+#nextslide {
+  background: url("./img/forward.png") repeat scroll 0 0 transparent;
+  right: 10px;
+}
+#prevslide:active,
+#nextslide:active {
+  margin-top: -19px;
+}
+
+
+
+
+
+
