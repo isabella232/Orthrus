@@ -1,7 +1,13 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--> 
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]--> 
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
   <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <title>Orthrus Studio</title>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
   
@@ -13,12 +19,34 @@
   <link rel="stylesheet" href="./application.css" type="text/css" charset="utf-8">
   
   
- 
+    <script type="text/javascript">
+        /**
+     * Protect window.console method calls, e.g. console is not defined on IE
+     * unless dev tools are open, and IE doesn't define console.debug
+     */
+    (function() {
+      if (!window.console) {
+        window.console = {};
+      }
+      // union of Chrome, FF, IE, and Safari console methods
+      var m = [
+        "log", "info", "warn", "error", "debug", "trace", "dir", "group",
+        "groupCollapsed", "groupEnd", "time", "timeEnd", "profile", "profileEnd",
+        "dirxml", "assert", "count", "markTimeline", "timeStamp", "clear"
+      ];
+      // define undefined methods as noops to prevent errors
+      for (var i = 0; i < m.length; i++) {
+        if (!window.console[m[i]]) {
+          window.console[m[i]] = function() {};
+        }    
+      } 
+    })();
+    </script>
   
   
 </head>
 <body>
-
+ <!--[if lt IE 7]> <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p> <![endif]-->
 
 <div  class='row-fluid' style='z-index:800'>
  <div id="logo" class="span3 offset2 accordion-group-noop"  >
@@ -59,6 +87,7 @@
   <script type="text/javascript" charset="utf-8">
     var jQuery  = require("jqueryify-all");
     var exports = this;
+    
   </script>
     
 	
@@ -77,11 +106,11 @@
   <script type="text/javascript" charset="utf-8">
   
      
-
+    
 	  
-    jQuery(function(){
+    jQuery(document).ready(function(){
       
-	  
+	 
 	  
 	  //Logo
 	   $('#logo').on('mouseover.collapse.data-api', '[data-toggle=collapse]', function(e) {
@@ -292,7 +321,7 @@
    }
 
 
-
+  
     
   </script>
   

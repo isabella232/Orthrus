@@ -3,8 +3,7 @@
 
 <div class='row-fluid'>
 
-<div  id='portifolioCarousel' class='carousel slide vertical'  data-interval='0'   >
-<ul id='portifolio-list' class=' carousel-inner'>
+<ul class='portifolio-list''>
 <li>
  <ul class='portifolio work-header'>
   <li> 
@@ -12,9 +11,16 @@
 	</li>
  </ul>
 </li>
+</ul>
+
+<div  id='portifolioCarousel' class='carousel slide vertical'  data-interval='0'   >
+
+
+<ul id='portifolio-list' class=' carousel-inner'>
+
 <% for val, idx in @elements: %>
 <li class='item <%= "active" if idx == 0 %>'>
-  <ul class='portifolio'>
+  <ul class='portifolio portifolio-page'>
      <% for gval, idx in val: %>
      <li class='portifolio-item'>
      <br/>

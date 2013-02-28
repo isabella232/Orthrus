@@ -12620,7 +12620,8 @@ module.exports = window.jQuery;}, "spine/index": function(exports, require, modu
     PortifolioList.prototype.className = 'portifolioList';
 
     PortifolioList.prototype.elements = {
-      '.portifoliolistitem': 'items'
+      '.portifoliolistitem': 'items',
+      '.portifolio-page': 'ulpfitems'
     };
 
     function PortifolioList() {
@@ -12636,7 +12637,7 @@ module.exports = window.jQuery;}, "spine/index": function(exports, require, modu
     };
 
     PortifolioList.prototype.render = function() {
-      var e, i, ix, p, presult, _i, _len;
+      var e, i, ix, maxheight, p, presult, ulpfitemsheight, _i, _len;
       this.log('Rendering PortifolioList: ');
       $('body').trigger('gallerychange', {
         data: []
@@ -12668,6 +12669,15 @@ module.exports = window.jQuery;}, "spine/index": function(exports, require, modu
       $('.carousel').carousel({
         interval: 0
       });
+      ulpfitemsheight = this.ulpfitems.get().map(function(ul) {
+        return $(ul).height();
+      });
+      maxheight = Math.max.apply(null, ulpfitemsheight);
+      this.log(ulpfitemsheight);
+      if (maxheight !== null) {
+        this.ulpfitems.height(maxheight);
+      }
+      this.log(maxheight);
       return this.log('end portifoliolist template and carousel');
     };
 
@@ -13393,7 +13403,7 @@ module.exports = window.jQuery;}, "spine/index": function(exports, require, modu
         __out.push('</a>\n            </li>          \n           \n            ');
       }
     
-      __out.push(' \n          </ul>\n          </div>          \n          <div class=\'span6 pull-right\'>\n            <div class=\'row-fluid\'>\n            <div class=\'span2\'> </div>\n            <div class=\'span2\'  style=\'\'>\n              <header class=\'footer-header-title\'>Blog</header>\n              <ul class=\'footer-links\'>\n                <li><a href=\'#\'>New Post</a></li>\n                <li><a href=\'#\'><img alt=\'rss\' src=\'./assets/img/rss_logo.gif\' /></a></li>                \n              </ul>\n            </div>  \n            <div class=\'span2\'>\n              <header class=\'footer-header-title\'>Info</header>\n              <ul class=\'footer-links\' >\n                <li><a href=\'#\'>About Us</a></li>\n                <li><a href=\'#\'>Client Login</a></li>\n                \n              </ul>\n            </div>  \n            <div class=\'span2\'>\n              <header class=\'footer-header-title\'>Contact</header>\n              <ul  class=\'footer-links\'>\n                <li><a href=\'#\'>Email</a></li>\n                <li><a href=\'#\'><img alt=\'twitter\' src=\'./assets/img/twitter_logo.gif\' /></a>&nbsp;\n                <a href=\'#\'><img alt=\'facebook\' src=\'./assets/img/facebook_logo.gif\' /></a>\n                </li>\n                \n              </ul>\n            </div>  \n            <div class=\'span2\'> </div>\n            </div>         \n         </div>\n                        \n       </div>  \n      </div>  \n      \n      <div class=\'footer-rights\'>\n      &#0174; 2012 ORTHRUS STUDIO, ALL RIGHTS RESERVED\n      </div>\n      \n\t  \n      ');
+      __out.push(' \n          </ul>\n          </div>          \n          <div class=\'span6 pull-right\'>\n            <div class=\'row-fluid\'>\n            <div class=\'span2\'> </div>\n            <div class=\'span2\'  style=\'\'>\n              <header class=\'footer-header-title\'>Blog</header>\n              <ul class=\'footer-links\'>\n                <li><a href=\'#\'>New Post</a></li>\n                <li><a href=\'#\'><img alt=\'rss\' src=\'./assets/img/rss_logo.gif\' /></a></li>                \n              </ul>\n            </div>  \n            <div class=\'span2\'>\n              <header class=\'footer-header-title\'>Info</header>\n              <ul class=\'footer-links\' >\n                <li><a href=\'#\'>About Us</a></li>\n                <li><a href=\'#\'>Client Login</a></li>\n                \n              </ul>\n            </div>  \n            <div class=\'span2\'>\n              <header class=\'footer-header-title\'>Contact</header>\n              <ul  class=\'footer-links\'>\n                <li><a href=\'#\'>Email</a></li>\n                <li><a href=\'#\'><img alt=\'twitter\' src=\'./assets/img/twitter_logo.gif\' /></a>&nbsp;\n                <a href=\'#\'><img alt=\'facebook\' src=\'./assets/img/facebook_logo.gif\' /></a>\n                </li>\n                \n              </ul>\n            </div>  \n            <div class=\'span2\'> </div>\n            </div>         \n         </div>\n                        \n       </div>  \n      </div>  \n      \n      <div class=\'footer-rights\'>\n      &#0174; 2013 ORTHRUS STUDIO, ALL RIGHTS RESERVED\n      </div>\n      \n\t  \n      ');
     
     }).call(this);
     
@@ -13609,7 +13619,7 @@ module.exports = window.jQuery;}, "spine/index": function(exports, require, modu
     (function() {
       var cval, gval, idx, val, _i, _j, _k, _len, _len1, _len2, _ref, _ref1;
     
-      __out.push('\n\n\n<div class=\'row-fluid\'>\n\n<div  id=\'portifolioCarousel\' class=\'carousel slide vertical\'  data-interval=\'0\'   >\n<ul id=\'portifolio-list\' class=\' carousel-inner\'>\n<li>\n <ul class=\'portifolio work-header\'>\n  <li> \n    <span  class=\'\'>Recent Works</span>\n\t</li>\n </ul>\n</li>\n');
+      __out.push('\n\n\n<div class=\'row-fluid\'>\n\n<ul class=\'portifolio-list\'\'>\n<li>\n <ul class=\'portifolio work-header\'>\n  <li> \n    <span  class=\'\'>Recent Works</span>\n\t</li>\n </ul>\n</li>\n</ul>\n\n<div  id=\'portifolioCarousel\' class=\'carousel slide vertical\'  data-interval=\'0\'   >\n\n\n<ul id=\'portifolio-list\' class=\' carousel-inner\'>\n\n');
     
       _ref = this.elements;
       for (idx = _i = 0, _len = _ref.length; _i < _len; idx = ++_i) {
@@ -13618,7 +13628,7 @@ module.exports = window.jQuery;}, "spine/index": function(exports, require, modu
         if (idx === 0) {
           __out.push(__sanitize("active"));
         }
-        __out.push('\'>\n  <ul class=\'portifolio\'>\n     ');
+        __out.push('\'>\n  <ul class=\'portifolio portifolio-page\'>\n     ');
         for (idx = _j = 0, _len1 = val.length; _j < _len1; idx = ++_j) {
           gval = val[idx];
           __out.push('\n     <li class=\'portifolio-item\'>\n     <br/>\n\t   <a href="#/projects/');

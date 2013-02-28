@@ -10,12 +10,15 @@
 	
 */
 
+
+ 
 (function($){
 
 	/* Place Supersized Elements
 	----------------------------*/
 	$(document).ready(function() {
-    console.log('Starting supersized');
+    //alert('Starting supersized');
+    //console.log('Starting supersized');
 		$('body').append('<div id="supersized-loader"></div><ul id="supersized"></ul>');
 	});
     

@@ -16,6 +16,7 @@ class PortifolioList extends Spine.Controller
   
   elements:
     '.portifoliolistitem': 'items'
+    '.portifolio-page': 'ulpfitems'
 
   constructor: ->
     super    
@@ -50,10 +51,16 @@ class PortifolioList extends Spine.Controller
     @log e  
     @html @template({elements: e})
     $('.carousel').carousel({interval: 0})
+    ulpfitemsheight = @ulpfitems.get().map (ul) -> $(ul).height()
+    maxheight = Math.max.apply null,ulpfitemsheight
+    @log ulpfitemsheight
+    @ulpfitems.height(maxheight) if maxheight != null
+    @log maxheight
     @log 'end portifoliolist template and carousel'  
-  
- 
     
+    
+ 
+
 # module.exports = Portifolios
 
 class PortifolioGallery extends Spine.Controller

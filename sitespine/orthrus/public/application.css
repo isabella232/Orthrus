@@ -83,14 +83,18 @@ a:hover {
   width: 63;
   z-index: 50;
 }
-/* Spine General */
+/* ==========================================================================
+    Spine General 
+   ========================================================================== */
 .spine {
   height: 100%;
 }
 .spine > div {
   height: 100%;
 }
-/* Recent Works - Portiolio List */
+/* ==========================================================================
+   Recent Works - Portiolio List 
+   ========================================================================== */
 .portifolio-header {
   font-color: #fff;
   font-size: larger;
@@ -117,6 +121,12 @@ a:hover {
   margin-bottom: 40px;
 }
 #portifolio-list {
+  margin-top: 0;
+  text-align: center;
+  list-style: none outside none;
+  height: 100%;
+}
+.portifolio-list {
   margin-top: 0;
   text-align: center;
   list-style: none outside none;
@@ -203,7 +213,9 @@ ul.work-description li {
   bottom: 20px;
   right: 20px;
 }
-/* Portifolio Gallery */
+/* ==========================================================================
+   Portifolio Gallery 
+   ========================================================================== */
 #gallery-content {
   margin-top: 80px;
 }
@@ -271,7 +283,9 @@ a.thumbnail > img:hover {
 .gallery-header {
   opacity: 1;
 }
-/* Gallery Slideshow */
+/* ==========================================================================
+   Gallery Slideshow 
+   ========================================================================== */
 .navsidebar {
   width: 167px !important;
   margin-top: 270px !important;
@@ -324,7 +338,9 @@ li.portifolionav-item {
   width: 140px;
   height: 52px;
 }
-/* Arrow Scroll   */
+/* ==========================================================================
+   Arrow Scroll   
+   ========================================================================== */
 .footer-up  .fl {
   bottom: 170px !important;
 }
@@ -358,7 +374,9 @@ li.portifolionav-item {
   height: 51px;
   cursor: pointer;
 }
-/* Gallery Project Coloring  [Deprecated using color passed from wp] */
+/* ==========================================================================
+   Gallery Project Coloring  [Deprecated using color passed from wp] 
+   ========================================================================== */
 .color-website {
   color: Red;
 }
@@ -393,7 +411,9 @@ li.portifolionav-item {
 .background-social {
   background-color: Blue;
 }
-/* Footer   */
+/* ==========================================================================
+   Footer   
+   ========================================================================== */
 .nav-collapse .collapse {
   height: auto !important;
   overflow: visible !important;
@@ -498,7 +518,9 @@ ul.inline li {
   position: absolute;
   top: -9px;
 }
-/* Twitter bootstrap Carousel Vertical override */
+/* ==========================================================================
+   Twitter bootstrap Carousel Vertical override 
+   ========================================================================== */
 .vertical .carousel-inner {
   height: 100%;
 }
@@ -533,7 +555,9 @@ ul.inline li {
 .carousel.vertical .item {
   left: 0;
 }
-/* Slide controls override shutter theme css*/
+/* ==========================================================================
+   Slide controls override shutter theme css
+   ========================================================================== */
 #prevslide,
 #nextslide {
   height: 43px;
